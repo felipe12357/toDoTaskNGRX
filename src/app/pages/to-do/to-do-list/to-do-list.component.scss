@@ -1,0 +1,31 @@
+@import '../../../../constants.scss';
+
+.list-container {
+    border:2px solid $color-grey-blue;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    label {
+        font-weight: bold;
+    }
+
+    div  {
+        display: grid;
+        grid-template-columns: minmax(9rem, 1fr) 7rem  7rem 3rem;
+        align-items: center;
+        margin-bottom: 20px;
+    
+        border-bottom: 1px solid $color-grey-blue;
+        span:last-child{
+            color:$color-red;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-bottom: 3px;
+        }
+    }
+
+    .past-due-date{
+        color:$color-red
+    }
+
+}

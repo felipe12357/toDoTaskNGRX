@@ -1,0 +1,10 @@
+<form [formGroup]="toDoForm">
+    <label>Add Task</label>
+    <input type="text" formControlName="name">
+    <input type="date" formControlName="dueDate">
+    <input type="checkbox" formControlName="isCompleted">
+
+    <button (click)="save()"> Save </button>
+</form>
+
+

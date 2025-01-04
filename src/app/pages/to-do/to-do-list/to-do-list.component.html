@@ -1,0 +1,17 @@
+<div class="list-container">
+    <div>
+        <label>Task</label>
+        <label>Due Date</label>
+        <label>Completed</label>
+    </div>
+    <div *ngFor="let task of tasks$ |async">
+        <span [ngClass]="{'past-due-date': ((task.dueDate) | transformDate) <today}">
+            {{  task.name}}
+        </span> 
+        <span>{{task.dueDate | date}} </span>
+        <span>{{task.isCompleted}}</span>
+        <span role="button" (click)="delete(task.id)">&#215;</span>
+    </div>
+</div>
+
+
