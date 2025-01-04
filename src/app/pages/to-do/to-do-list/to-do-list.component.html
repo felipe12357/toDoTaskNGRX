@@ -5,7 +5,7 @@
         <label>Completed</label>
     </div>
     <div *ngFor="let task of tasks$ |async">
-        <span [ngClass]="{'past-due-date': ((task.dueDate) | transformDate) <today}">
+        <span [ngClass]="{'past-due-date': (task.dueDate) <today.getTime()}">
             {{  task.name}}
         </span> 
         <span>{{task.dueDate | date}} </span>

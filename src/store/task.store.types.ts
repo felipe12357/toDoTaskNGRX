@@ -1,6 +1,6 @@
 export type TaskType = {
     name:string,
-    dueDate:string,
+    dueDate:number,
     isCompleted:boolean,
     id:number
 }

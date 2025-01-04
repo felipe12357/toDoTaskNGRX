@@ -23,9 +23,12 @@ export class ToDoFormComponent {
 
   save(){
       const {name,dueDate,isCompleted} = this.toDoForm.value;
+      const date = new Date(dueDate);
+      date.setDate(date.getDate() + 1);
+
       const task:TaskType ={
         name:name,
-        dueDate:dueDate,
+        dueDate:new Date(date).getTime(),
         isCompleted:isCompleted,
         id:Date.now()
       }
